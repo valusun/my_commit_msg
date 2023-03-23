@@ -16,11 +16,11 @@ class CommitMsgConverter:
             prefix, msg = commit_msg.split("/", 1)
             match prefix:
                 case "update":
-                    converted = f"[:sparkles:update:sparkles:] {msg}"
+                    converted = f":sparkles:update:sparkles: {msg}"
                 case "add":
-                    converted = f"[:tada:add:tada:] {msg}"
+                    converted = f":tada:add:tada: {msg}"
                 case "remove":
-                    converted = f"[:boom:remove:boom:] {msg}"
+                    converted = f":boom:remove:boom: {msg}"
                 case _:
                     SyntaxError("Commitメッセージに構文の誤りがあります")
                     sys.exit(1)
