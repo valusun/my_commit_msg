@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+import sys
+from dataclasses import dataclass
+
+
+@dataclass
+class CommitMsgConverter:
+    commit_editmsg: str
+
+    def Convert(self) -> None:
+        """Commitメッセージを変換する"""
+
+        with open(self.commit_editmsg, "r+", encoding="utf-8") as f:
+            commit_msg = f.read().strip()
+            prefix, msg = commit_msg.split("/", 1)
+            match prefix:
+                case "update":
+                    converted = f"[:sparkles:update:sparkles:] {msg}"
+                case "add":
+                    converted = f"[:tada:add:tada:] {msg}"
+                case "remove":
+                    converted = f"[:boom:remove:boom:] {msg}"
+                case _:
+                    SyntaxError("Commitメッセージに構文の誤りがあります")
+                    sys.exit(1)
+            f.seek(0)
+            f.write(converted)
+            f.truncate()
+
+
+def main():
+    commit_editmsg = sys.argv[1]
+    CommitMsgConverter(commit_editmsg).Convert()
+
+
+if __name__ == "__main__":
+    main()
