@@ -40,8 +40,7 @@ class CommitMsgConverter:
             case "remove":
                 return f"[:boom:remove:boom:] {msg}"
             case _:
-                SyntaxError("Commitメッセージに構文の誤りがあります")
-                sys.exit(1)
+                raise SyntaxError("Commitメッセージに構文の誤りがあります")
 
 
 def main():
