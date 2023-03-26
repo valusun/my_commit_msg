@@ -39,6 +39,8 @@ class CommitMsgConverter:
                 return f"[:tada:add:tada:] {msg}"
             case "remove":
                 return f"[:boom:remove:boom:] {msg}"
+            case "fix":
+                return f"[:bug:fix:bug:] {msg}"
             case _:
                 raise SyntaxError("Commitメッセージに構文の誤りがあります")
 
