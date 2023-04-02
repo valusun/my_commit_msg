@@ -24,7 +24,7 @@ class CommitMsg:
 
         Args:
             prefix (str): コミットメッセージのprefix
-            msg (str): コミットメッセージ
+            msg (str): コミットメッセージ本体
 
         Returns:
             str: 変換後のコミットメッセージ
