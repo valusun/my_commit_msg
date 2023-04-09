@@ -34,15 +34,16 @@ class CommitMsg:
         """
         match prefix:
             case "update":
-                return f"[:sparkles:update:sparkles:] {msg}"
+                emoji = ":sparkles:"
             case "add":
-                return f"[:tada:add:tada:] {msg}"
+                emoji = ":tada:"
             case "remove":
-                return f"[:boom:remove:boom:] {msg}"
+                emoji = ":boom:"
             case "fix":
-                return f"[:bug:fix:bug:] {msg}"
+                emoji = ":bug:"
             case _:
                 raise SyntaxError("Commitメッセージに構文の誤りがあります")
+        return f"{emoji} {prefix} {msg}"
 
 
 def main():
