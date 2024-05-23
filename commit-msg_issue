@@ -46,8 +46,6 @@ class CommitMsg:
                 emoji = ":boom:"
             case "fix":
                 emoji = ":bug:"
-            case "change":
-                emoji = ":shuffle_tracks_button:"
             case "wip":
                 emoji = ":construction:"
             case _:
