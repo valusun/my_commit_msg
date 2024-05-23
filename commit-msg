@@ -46,7 +46,7 @@ class CommitMsg:
             case "wip":
                 emoji = ":construction:"
             case _:
-                raise SyntaxError("Commitメッセージに構文の誤りがあります")
+                raise SyntaxError("Syntax error in Commit message")
         return f"{emoji} {msg}"
 
 
