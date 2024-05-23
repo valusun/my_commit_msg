@@ -15,6 +15,8 @@ class CommitMsg:
             commit_msg = f.read().strip()
             prefix, msg = commit_msg.split("/", 1)
             formatted_msg = self._convert_msg(prefix, msg)
+            if msg.strip("") == "":
+                raise SyntaxError("Let's leave some notes!")
             f.seek(0)
             f.write(formatted_msg)
             f.truncate()

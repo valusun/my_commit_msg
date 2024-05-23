@@ -16,6 +16,8 @@ class CommitMsg:
             prefix, issue_num, msg = commit_msg.split("/", 2)
             if not issue_num.isdecimal():
                 raise SyntaxError("issue番号を確認してください")
+            if msg.strip("") == "":
+                raise SyntaxError("Let's leave some notes!")
             formatted_msg = self._convert_msg(prefix, issue_num, msg)
             f.seek(0)
             f.write(formatted_msg)
