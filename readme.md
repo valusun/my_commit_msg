@@ -15,17 +15,11 @@
 
 現時点で`prefix`は、下記の3パターンに対応している。
 
-1. `add`
-2. `update`
-3. `remove`
+1. `feat`
+2. `add`
+3. `delete`
 4. `fix`
-
-### 例
-
-- `add/設定ファイルの作成`  
-- `update/テストの更新`  
-- `remove/レガシー機能の削除`  
-- `fix/機能のバグ修正`
+5. `wip`
 
 ※動かない場合は、実行権限を与えてみてください。  
 `chmod +x commit-msg`
