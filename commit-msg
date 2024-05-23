@@ -33,7 +33,7 @@ class CommitMsg:
             対応するprefixではない場合は`SyntaxError`
         """
         match prefix:
-            case "update":
+            case "feat":
                 emoji = ":sparkles:"
             case "add":
                 emoji = ":tada:"
