@@ -3,7 +3,7 @@
 ## 使い方
 
 1. `commit-msg`ファイルをコピーして下記に置く  
-`./git/hooks/commit-msg`
+`.git/hooks/commit-msg`
 
 ## commit-msg
 
