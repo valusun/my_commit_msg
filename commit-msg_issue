@@ -40,7 +40,7 @@ class CommitMsg:
                 emoji = ":sparkles:"
             case "add":
                 emoji = ":tada:"
-            case "remove":
+            case "delete":
                 emoji = ":boom:"
             case "fix":
                 emoji = ":bug:"
