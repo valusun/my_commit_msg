@@ -47,7 +47,7 @@ class CommitMsg:
                 emoji = ":construction:"
             case _:
                 raise SyntaxError("Commitメッセージに構文の誤りがあります")
-        return f"{emoji} {prefix} {msg}"
+        return f"{emoji} {msg}"
 
 
 def main():
